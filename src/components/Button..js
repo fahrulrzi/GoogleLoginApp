@@ -30,7 +30,7 @@ const Button = ({
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#4285F4', // Google blue
+    backgroundColor: '#4285F4',
     paddingVertical: 12,
     paddingHorizontal: 24,
     borderRadius: 8,

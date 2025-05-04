@@ -9,7 +9,6 @@ const LoginScreen = ({navigation}) => {
   const [initializing, setInitializing] = useState(true);
 
   useEffect(() => {
-    // Memeriksa apakah user sudah login sebelumnya
     const checkLoginStatus = async () => {
       try {
         const signedIn = await isSignedIn();

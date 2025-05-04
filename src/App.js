@@ -5,7 +5,6 @@ import {configureGoogleSignIn} from './services/googleAuth';
 
 const App = () => {
   useEffect(() => {
-    // Konfigurasi Google Sign-In saat aplikasi dimulai
     configureGoogleSignIn();
   }, []);
 

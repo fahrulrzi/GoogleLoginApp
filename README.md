@@ -1,5 +1,10 @@
 # Cara Nge RUN e. DIBACA NJINK UDAH DIBUATIN JUGA
 
+## Janlup!!!
+```
+npm install // ya njink
+```
+
 ## Kalo di Android
 ```
 npx react-native run-android

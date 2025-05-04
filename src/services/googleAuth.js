@@ -4,21 +4,16 @@ import {
 } from '@react-native-google-signin/google-signin';
 import {Platform} from 'react-native';
 
-// Konfigurasi konstan untuk Google Sign-In
 export const configureGoogleSignIn = () => {
   GoogleSignin.configure({
-    // Untuk Android, kita menggunakan webClientId
     webClientId: '312931443558-6bt0rvijntcde8v8tp5kjb0okaq5n2qv.apps.googleusercontent.com',
-    // Untuk iOS, kita perlu URL scheme yang benar
     iosClientId:
       Platform.OS === 'ios' ? 'com.googleusercontent.apps.312931443558-r2v68249hvrr9a6nqnh9p7f2g176it3e' : undefined,
-    // Menentukan scope yang diperlukan
     scopes: ['profile', 'email'],
     offlineAccess: true,
   });
 };
 
-// Melakukan sign in dengan Google
 export const signInWithGoogle = async () => {
   try {
     await GoogleSignin.hasPlayServices();
@@ -46,7 +41,6 @@ export const signInWithGoogle = async () => {
   }
 };
 
-// Memeriksa status sign-in saat ini
 export const getCurrentUser = async () => {
   try {
     const currentUser = await GoogleSignin.getCurrentUser();
@@ -57,7 +51,6 @@ export const getCurrentUser = async () => {
   }
 };
 
-// Memeriksa apakah user sudah sign in
 export const isSignedIn = async () => {
   try {
     const isUserSignedIn = await GoogleSignin.isSignedIn();
@@ -68,7 +61,6 @@ export const isSignedIn = async () => {
   }
 };
 
-// Sign out dari akun Google
 export const signOut = async () => {
   try {
     await GoogleSignin.revokeAccess();
